@@ -1,0 +1,15 @@
+clc
+close all;
+clear;
+
+[file, path] = uigetfile({'*.jpg;*.bmp;*.png;*.tif'},'Choose an image');
+i = [path, file];
+subplot(1,2,1);
+image = imread(i);
+imshow(image);
+subplot(1,2,2);
+newImage = imresize(image, [300 500]);
+imshow(newImage);
+
+grayImage = mygrayfun(newImage);
+imshow(gra)
